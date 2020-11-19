@@ -1,3 +1,5 @@
+
+// data set [name, name, name...]
 let arrayOfNames = ["Adam", "Alex", "Aaron", "Ben", "Carl", "Dan", "David", "Edward", "Fred", "Frank", "George", "Hal", "Hank", "Ike", "John", "Jack", "Joe", "Larry", "Monte", "Matthew", "Mark", "Nathan", "Otto", "Paul", "Peter", "Roger", "Roger", "Steve", "Thomas", "Tim"]
 
 arrayOfNames.forEach((name) => {
@@ -5,16 +7,15 @@ arrayOfNames.forEach((name) => {
 }); // sick, it worked.
 
 
+
+//data set [x, y]
 let tupleNumbers = [];
 
-function tupler(arr) {
-  if (arr.length < 40) {
+function generateTuples(arr) {
     for (var i = 0; i < 40; i++) {
-      for (var j = 40; j > 0; j--)
-        arr.push([i, j])
-
-    }
+        arr.push([i, i*Math.random()])
     }
   return arr;
-}
-//  uhh this one makes an ugly set of 1680 tuples ummmm yeah... fix this pls jake
+} // ok i fixed it, this has neat tuples
+
+generateTuples(tupleNumbers);
