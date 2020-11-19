@@ -13,7 +13,7 @@ let tupleNumbers = [];
 
 function generateTuples(arr) {
     for (var i = 0; i < 40; i++) {
-        arr.push([i, i*Math.random()])
+        arr.push([i, Math.floor(i*Math.random()*2)])
     }
   return arr;
 } // ok i fixed it, this has neat tuples
