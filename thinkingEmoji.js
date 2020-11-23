@@ -20,4 +20,3 @@ function generateTuples(arr) {
 
 generateTuples(tupleNumbers);
 
-// gbs test
