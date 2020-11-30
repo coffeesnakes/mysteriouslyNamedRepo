@@ -76,3 +76,14 @@ console.log('expects 80085 :', reverseIntImproved(testReverse2));
 console.log('expects 1337 :', reverseIntImproved(testReverse3));
 
 
+// invering a binary tree
+
+var invertTree = function (root) {
+  if (root === null) { return null; }
+  var node = root.left;
+  root.left = root.right;
+  root.right = node;
+  if (root.left) { invertTree(root.left); }
+  if (root.right) { invertTree(root.right); }
+  return root;
+};
