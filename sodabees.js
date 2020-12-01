@@ -25,4 +25,8 @@ const fizzbuzzer = function (){
 }
 }
 
-// ternary version in progress.. awaiting brain
+// ternary version :thinkingEmoji:
+const ternaryFizzBuzzer = function () {
+for (let i = 1; i < 101;)
+console.log(( ++i % 3 ? '' : 'Fizz') + (i % 5 ? '': 'Buzz') || i)
+}
