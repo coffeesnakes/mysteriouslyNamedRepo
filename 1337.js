@@ -92,12 +92,14 @@ const charCount = function (string) {
   let result = {};
   for (let i = 0; i < string.length; i++) {
     let char = string[i].toLowerCase();
+    if (/[a-z0-9]/.test(char)){
     if (result[char] > 0) {
       result[char]++
     } else {
       result[char] = 1;
     };
   }
+}
   return result;
 }
 
