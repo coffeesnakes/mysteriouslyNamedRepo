@@ -88,6 +88,22 @@ const invertTree = function (root) {
   return root;
 };
 
+
+
+function isAlphaNumeric(str) {
+  var code, i, len;
+
+  for (i = 0, len = str.length; i < len; i++) {
+    code = str.charCodeAt(i);
+    if (!(code > 47 && code < 58) && // numeric (0-9)
+      !(code > 64 && code < 91) && // upper alpha (A-Z)
+      !(code > 96 && code < 123)) { // lower alpha (a-z)
+      return false;
+    }
+  }
+  return true;
+};
+
 const charCount = function (string) {
   let result = {};
   for (let i = 0; i < string.length; i++) {
@@ -107,7 +123,7 @@ const charCountRefactored = function (str) {
   let result = {};
   for (let char of str) {
     char = char.toLowerCase();
-    if (/[a-z0-9]/.test(char)) {
+    if (isAlphaNumeric(char)) {
       // if result[char] exists it will evaluate to truthy and thus we increment because truthy assigns to the left of the OR operator.
       // if result[char] didnt exist it would evaluate to falsey and then default to the right of the OR operator, assigning result[char] to be 1
       result[char] = ++result[char] || 1;
