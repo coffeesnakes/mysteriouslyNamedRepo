@@ -3,6 +3,8 @@ const howdy = name => console.log("howdy there, " + name);
 // use a SET to exclude repeats
 // (176ms)
 const distributeCandies = candies => Math.min(candies.length / 2, new Set(candies).size);
+// yeet
+const square = num => num * num;
 
 
 // actually a faster solution (132ms) but not arrow ;__;

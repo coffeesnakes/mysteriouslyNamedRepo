@@ -41,7 +41,7 @@ let targ2 = 6
 let test3 = [300, 7, 77, 15, 0, 3, 24, 13, 2, 1, 14, -2, 69, 420];
 let targ3 = 13;
 
-console.log('expects [1, 2]   :  ',   twoSumImproved(test2, targ2));
+console.log('expects [1, 2]   :  ', twoSumImproved(test2, targ2));
 console.log('expects [0, 1]   :  ', twoSumImproved(test1, targ1));
 console.log('expects [3, 11]  :  ', twoSumImproved(test3, targ3))
 
@@ -49,18 +49,18 @@ console.log('expects [3, 11]  :  ', twoSumImproved(test3, targ3))
 
 
 const reverseInt = function (num) {
-  return(
+  return (
     // parseFloat runs last, but converts a string into a number removing leading zeros
     parseFloat(
       // runs first making the number a string
       num.toString()
-      // splits the string into an indexed array
-    .split('')
-    // reverses that indexed array
-    .reverse()
-    // reassembles the array indexes into a string
-    .join('')
-    // Math.sign makes a positive number negative and vice versa
+        // splits the string into an indexed array
+        .split('')
+        // reverses that indexed array
+        .reverse()
+        // reassembles the array indexes into a string
+        .join('')
+      // Math.sign makes a positive number negative and vice versa
     ) * Math.sign(num)
   )
 };
@@ -108,14 +108,14 @@ const charCount = function (string) {
   let result = {};
   for (let i = 0; i < string.length; i++) {
     let char = string[i].toLowerCase();
-    if (/[a-z0-9]/.test(char)){
-    if (result[char] > 0) {
-      result[char]++
-    } else {
-      result[char] = 1;
-    };
+    if (/[a-z0-9]/.test(char)) {
+      if (result[char] > 0) {
+        result[char]++
+      } else {
+        result[char] = 1;
+      };
+    }
   }
-}
   return result;
 }
 
