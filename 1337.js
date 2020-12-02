@@ -2,7 +2,7 @@
 // brute force solution O(n^2)
 // nested loops makes the time complexity grow exponentially.
 
-var twoSum = function (nums, target) {
+const twoSum = function (nums, target) {
   let result = [];
 
   for (let i = 0; i < nums.length; ++i) {
@@ -18,7 +18,7 @@ var twoSum = function (nums, target) {
 
 // better twoSum func with hash which leads to O(n) TSC
 // though lookups in a hash are O(1)
-var twoSumImproved = function (nums, target) {
+const twoSumImproved = function (nums, target) {
   let hash = {};
   for (let i = 0; i < nums.length; ++i) {
     let currentNumber = nums[i];
@@ -48,7 +48,7 @@ console.log('expects [3, 11]  :  ', twoSumImproved(test3, targ3))
 
 
 
-var reverseInt = function (num) {
+const reverseInt = function (num) {
   return(
     // parseFloat runs last, but converts a string into a number removing leading zeros
     parseFloat(
@@ -78,7 +78,7 @@ console.log('expects 1337 :', reverseIntImproved(testReverse3));
 
 // invering a binary tree
 
-var invertTree = function (root) {
+const invertTree = function (root) {
   if (root === null) { return null; }
   var node = root.left;
   root.left = root.right;
@@ -87,3 +87,21 @@ var invertTree = function (root) {
   if (root.right) { invertTree(root.right); }
   return root;
 };
+
+const charCount = function (string) {
+  let result = {};
+  for (let i = 0; i < string.length; i++) {
+    let char = string[i].toLowerCase();
+    if (result[char] > 0) {
+      result[char]++
+    } else {
+      result[char] = 1;
+    };
+  }
+  return result;
+}
+
+console.log(charCount('hello world'));
+// expects { h: 1, e: 1, l: 3, o: 2, ' ': 1, w: 1, r: 1, d: 1 }
+console.log(charCount('hElLOFRIEnd'))
+// expects { h: 1, e: 2, l: 2, o: 1, f: 1, r: 1, i: 1, n: 1, d: 1 }
