@@ -35,3 +35,16 @@ var onlyEven = evenOccurrence([1, 7, 2, 4, 5, 6, 8, 9, 6, 4]);
 9: true
  }
  */
+
+var evenOccurrence = function(arr) {
+  const s = {};
+  for (let i = 0; i < arr.length; ++i) {
+    s[arr[i]] = !s[arr[i]]
+  }
+  for (let i = 0; i < arr.length; ++i) {
+    if (!s[arr[i]]) {
+      return arr[i];
+    }
+  }
+  return null;
+};
