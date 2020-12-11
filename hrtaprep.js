@@ -1,9 +1,9 @@
 //Instructions:
 // Work on the problems in order. Do not skip problems. You may go back and make edits to problems you have already finished. Some problems may not require you to write any code. Some problems may have potential edge cases, do not code for these edge cases but you may briefly acknowledge them if you feel it is important to do so. You are not allowed to use any outside editors or notes, you also can not look things up on MDN, stackoverflow, or any other outside sites. If you have a question or feel stuck ask for help. You are not expected to finish every problem, but if you are moving too slowly a proctor will give you a message to pick up the pace. We are most interested in your thought process when you are solving problems, so think out loud and speak to the camera as though it were a work colleague. Good luck!
 
-// Problem 1
+// Problem 0
 // Look into the camera and explain, in two minutes or less, why you are interested in becoming a software engineer.
-// Problem 2
+// Problem 1
 // Below is an assertEquals Function. Without going through each line of code, explain at a high level what this function does and when you would use it.
 
 function assertEquals(actual, expected, testName) {
@@ -14,7 +14,7 @@ function assertEquals(actual, expected, testName) {
  }
 }
 
-// Problem 3
+// Problem 2
 // We often want to round numbers either up or down to the nearest integer. We do this using Math.floor() and Math.ceil(). Below is a function that takes in a number and returns that number rounded down to the nearest integer. Fill out the test suite to make sure it is working properly.
 
 function roundDown(number) {
@@ -37,6 +37,22 @@ function testRoundDown() {
  assertEquals(actual, expected, testName);
 }
 testRoundDown();
+
+
+// Problem 3
+  // write a function that takes a whole-number numeric grade, representing a percentage, and returns the letter grade average (i.e. 87 -> 'B')
+
+// here are the ranges for letter grades for reference:
+// 0-59: F
+ // 60-69: D
+ // 70-79: C
+ // 80-89: B
+ // 90-100: A
+
+var findGrade = function(numericGrade) {
+  // Your code here
+
+}
 
 // Problem 4
 // A school needs to calculate how many teachers it will need for the upcoming year. Complete the function below to help them do this. Make sure to read the specs and use the tests provided to verify your code.
